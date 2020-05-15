@@ -1,0 +1,18 @@
+title: Intro to GitHub
+description: >-
+  In this course you will introduce to GitHub. And learn how to use GitHub and
+  get Benefits of it.
+template:
+  repo: intro-to-github-template
+  name: intro-to-github
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
