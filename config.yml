@@ -9,10 +9,17 @@ before:
   - type: createIssue
     title: Welcome!
     body: new-issue.md
+  - type: createIssue
 steps:
   - title: First step
     description: The first step in your course
-    event: issues.assigned
+    event: installation
     link: '{{ repoUrl }}'
     actions:
-      - type: closeIssue
+      - type: createIssue
+        title: We have an issue for you
+  - title: New step
+    actions:
+      - type: createIssue
+        title: A new issue
+        body: a-response-file.md
